@@ -8665,7 +8665,7 @@
 										title: "B站可以用"
 									}, {
 										name: "PAR",
-										url: "https%3A%2F%2Fjx.parwix.com%3A4433%2Fplayer%2F%3Furl%3D",
+										url: "https://jx.bozrc.com:4433/player/?url=",
 										jj: "1"
 									}, {
 										name: "CKP",
