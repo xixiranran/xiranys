@@ -154,7 +154,9 @@
 	//如果有播放链接
     if (playUrl) {
 		//去掉？后面的参数
-        document.getElementById("url").value = playUrl.split('?')[0];
+        <!-- document.getElementById("url").value = playUrl.split('?')[0]; -->
+		//上面这个会导致部分链接去掉？后面的链接改变，所以不用split。就用原网页
+        document.getElementById("url").value = playUrl;
 		//自动点击播放按钮
         document.getElementById('bf1').click();
 		//切换源
@@ -165,6 +167,7 @@
 		//如果在链接地址处回车，
 		document.getElementById('url').onkeydown = function (e) {
 			if (e.keyCode == 13) {
+				<!-- dihejk(); -->
 				document.getElementById('bf1').click();
 			}
 		}
