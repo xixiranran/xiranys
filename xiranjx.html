@@ -9,19 +9,6 @@
     <script type="text/javascript" src="https://lib.baomitu.com/jquery/1.12.4/jquery.min.js"></script>
 <!-- <script type="text/javascript" src="https://greasyfork.org/scripts/4870-maximize-video/code/Maximize%20Video.user.js"></script> -->
     <script type="text/javascript">
-	   // ==UserScript==
-// @name                Maximize Video
-// @name:zh-CN          视频网页全屏
-// @namespace           http://www.icycat.com
-// @description         Maximize all video players.Support Piture-in-picture.
-// @description:zh-CN   让所有视频网页全屏，开启画中画功能
-// @author              冻猫
-// @include             *
-// @exclude             *www.w3school.com.cn*
-// @version             12.0
-// @run-at              document-end
-// ==/UserScript==
-
 ;(() => {
   const gv = {
     isFull: false,
@@ -38,7 +25,6 @@
     "www.twitch.tv": [".player"],
     "www.youtube.com": ["#movie_player"],
     "www.yy.com": ["#player"],
-    "jason4774.github.io": ["#player"],
     "*weibo.com": ['[aria-label="Video Player"]', ".html5-video-live .html5-video"],
     "v.huya.com": ["#video_embed_flash>div"],
   }
@@ -546,8 +532,8 @@
           "#htmlToothbrush #bodyToothbrush .playerToothbrush {position:fixed !important;top:0px !important;left:0px !important;width:100vw !important;height:100vh !important;max-width:none !important;max-height:none !important;min-width:0 !important;min-height:0 !important;margin:0 !important;padding:0 !important;z-index:2147483646 !important;border:none !important;background-color:#000 !important;transform:none !important;}",
           "#htmlToothbrush #bodyToothbrush .parentToothbrush video {object-fit:contain !important;}",
           "#htmlToothbrush #bodyToothbrush .parentToothbrush .videoToothbrush {width:100vw !important;height:100vh !important;}",
-          '#playerControlBtn {text-shadow: none;visibility:hidden;opacity:0;display:none;transition: all 0.5s ease;cursor: pointer;font: 12px "微软雅黑";margin:0;width:64px;height:20px;line-height:20px;border:none;text-align: center;position: fixed;z-index:2147483647;background-color: #27A9D8;color: #FFF;} #playerControlBtn:hover {visibility:visible;opacity:1;background-color:#2774D8;}',
-          '#picinpicBtn {text-shadow: none;visibility:hidden;opacity:0;display:none;transition: all 0.5s ease;cursor: pointer;font: 12px "微软雅黑";margin:0;width:53px;height:20px;line-height:20px;border:none;text-align: center;position: fixed;z-index:2147483647;background-color: #27A9D8;color: #FFF;} #picinpicBtn:hover {visibility:visible;opacity:1;background-color:#2774D8;}',
+          '#playerControlBtn {text-shadow: none;visibility:visible;opacity:1;background-color:#2774D8;transition: all 0.5s ease;cursor: pointer;font: 12px "微软雅黑";margin:0;width:64px;height:20px;line-height:20px;border:none;text-align: center;position: fixed;z-index:2147483647;background-color: #27A9D8;color: #FFF;} }',
+          '#picinpicBtn {text-shadow: none;visibility:visible;opacity:1;background-color:#2774D8;transition: all 0.5s ease;cursor: pointer;font: 12px "微软雅黑";margin:0;width:53px;height:20px;line-height:20px;border:none;text-align: center;position: fixed;z-index:2147483647;background-color: #27A9D8;color: #FFF;} }',
           "#leftFullStackButton{display:none;position:fixed;width:1px;height:100vh;top:0;left:0;z-index:2147483647;background:#000;}",
           "#rightFullStackButton{display:none;position:fixed;width:1px;height:100vh;top:0;right:0;z-index:2147483647;background:#000;}",
         ].join("\n")
